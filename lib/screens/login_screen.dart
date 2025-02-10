@@ -1,3 +1,4 @@
+// lib/login_screen.dart
 import 'dart:async';
 import 'dart:math';
 import 'package:flutter/material.dart';
@@ -263,7 +264,6 @@ class _LoginScreenState extends State<LoginScreen> {
         defaultTargetPlatform == TargetPlatform.iOS;
     bool isWide = MediaQuery.of(context).size.width >= 800;
 
-    // Select background image based on theme:
     final String backgroundImage = themeNotifier.value == ThemeMode.dark
         ? 'assets/images/fondo.png'
         : 'assets/images/fondo-claro.png';
@@ -488,7 +488,6 @@ class _RotatingMessagesState extends State<RotatingMessages> {
 
   @override
   Widget build(BuildContext context) {
-    // Choose text styles based on theme mode:
     final TextStyle questionStyle = themeNotifier.value == ThemeMode.dark
         ? const TextStyle(
             fontSize: 60, fontWeight: FontWeight.bold, color: Colors.white)
@@ -518,7 +517,6 @@ class StaggeredFadeTextDouble extends StatefulWidget {
   final TextStyle? questionStyle;
   final TextStyle? answerStyle;
   final int perWordMillis;
-  // fadeOutMillis is no longer used.
   final VoidCallback? onCompleted;
   const StaggeredFadeTextDouble({
     Key? key,
@@ -548,7 +546,6 @@ class _StaggeredFadeTextDoubleState extends State<StaggeredFadeTextDouble>
     _questionWords = widget.question.split(' ');
     _answerWords = widget.answer.split(' ');
     _totalWords = _questionWords.length + _answerWords.length;
-    // Total duration for the fade-in animation per word.
     _totalDurationMillis = _totalWords * widget.perWordMillis;
     _controller = AnimationController(
       vsync: this,

@@ -22,12 +22,11 @@ class _ArticleCardState extends State<ArticleCard>
   bool _isLoading = true;
 
   @override
-  bool get wantKeepAlive => true; // Conservar el estado de la tarjeta
+  bool get wantKeepAlive => true;
 
   @override
   void initState() {
     super.initState();
-    // Simula una carga desde el servidor durante 2 segundos
     Future.delayed(const Duration(seconds: 2), () {
       if (mounted) setState(() => _isLoading = false);
     });
@@ -35,7 +34,7 @@ class _ArticleCardState extends State<ArticleCard>
 
   @override
   Widget build(BuildContext context) {
-    super.build(context); // Obligatorio al usar AutomaticKeepAliveClientMixin
+    super.build(context);
     final theme = Theme.of(context);
     final List<Color> iconColors = [
       Colors.blue,
