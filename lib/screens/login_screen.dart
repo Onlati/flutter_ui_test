@@ -459,7 +459,6 @@ class _RotatingMessagesState extends State<RotatingMessages> {
     'Interesting! 97% of businesses are investing in data analytics to stay competitive.',
     'Surprising fact: The term "data science" was first coined in 2001 by William S. Cleveland.',
     'Did you know? In 2023, AI-driven analytics saved businesses an estimated \$300 billion.',
-    'Fun fact: Data visualization expert Edward Tufte once said, "The simple graph has brought more information to the data analyst’s mind than any other device."'
   ];
   late final int randomIndex;
 
@@ -490,14 +489,14 @@ class _RotatingMessagesState extends State<RotatingMessages> {
   Widget build(BuildContext context) {
     final TextStyle questionStyle = themeNotifier.value == ThemeMode.dark
         ? const TextStyle(
-            fontSize: 60, fontWeight: FontWeight.bold, color: Colors.white)
+            fontSize: 50, fontWeight: FontWeight.bold, color: Colors.white)
         : const TextStyle(
-            fontSize: 60, fontWeight: FontWeight.bold, color: Colors.black);
+            fontSize: 50, fontWeight: FontWeight.bold, color: Colors.black);
     final TextStyle answerStyle = themeNotifier.value == ThemeMode.dark
         ? const TextStyle(
-            fontSize: 60, fontWeight: FontWeight.normal, color: Colors.white)
+            fontSize: 50, fontWeight: FontWeight.normal, color: Colors.white)
         : const TextStyle(
-            fontSize: 60, fontWeight: FontWeight.normal, color: Colors.black);
+            fontSize: 50, fontWeight: FontWeight.normal, color: Colors.black);
 
     final split = _splitMessage(messages[randomIndex]);
     return StaggeredFadeTextDouble(
